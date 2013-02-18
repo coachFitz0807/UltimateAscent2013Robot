@@ -84,7 +84,7 @@ public class Acquisition extends Subsystem {
         // Similarly for lowestDisk and highestDisk
         int tempLowestDisk = 4;
         int tempHighestDisk = 0;
-        for (int i=0; i!=NUMPOSITIONS; i++)
+       /* for (int i=0; i!=NUMPOSITIONS; i++)
         {
            sensorValues[i] = infraRedSensor[i].getVoltage();
            diskPositionsCandidate[i] = (sensorValues[i] > threshold);
@@ -97,7 +97,7 @@ public class Acquisition extends Subsystem {
                }
                tempNumDisks++;
            }
-        } 
+        } */
         // Check to see if the value changed.  If it did, update the SmartDashboard
         if (tempNumDisks != numDisks) {
             numDisks = tempNumDisks;
@@ -113,7 +113,7 @@ public class Acquisition extends Subsystem {
         }
     }
 
-    public void acquisitionOverride(double run)
+    public void acquisitionTurnScrews(double run)
     {
             try {
             acquisitionScrewlift.setX(run);
